@@ -4,7 +4,7 @@ vim.cmd("set noswapfile")
 
 vim.o.confirm = true
 vim.opt.title = true
-vim.api.nvim_create_autocmd("BufEnter", {
+autocmd("BufEnter", {
   group = vim.api.nvim_create_augroup("NvimTreeClose", {clear = true}),
   callback = function()
     local layout = vim.api.nvim_call_function("winlayout", {})

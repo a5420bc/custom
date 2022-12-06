@@ -17,8 +17,8 @@ M.ui = {
 M.plugins = require "custom.plugins"
 
 -- check core.mappings for table structure
--- M.mappings = require "custom.mappings"
+M.mappings = require "custom.mappings"
 
--- require "custom.plugins.floaterm"
+require "custom.plugins.floaterm"
 
 return M
