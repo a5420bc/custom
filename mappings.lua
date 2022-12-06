@@ -189,6 +189,12 @@ M.floaterm = {
   },
 }
 
+M.todo = {
+  n = {
+    ['<leader>tc'] = {":TodoTrouble<CR>", "todo trouble"},
+  }
+}
+
 -- more keybinds!
 
 return M
