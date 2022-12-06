@@ -46,15 +46,20 @@ return {
   },
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
-  -- ["ahmedkhalf/project.nvim"] = {
-  --   config = function()
-  --     require("project_nvim").setup {
-  --       -- your configuration comes here
-  --       -- or leave it empty to use the default settings
-  --       -- refer to the configuration section below
-  --     }
-  --   end
-  -- },
+  ["ahmedkhalf/project.nvim"] = {
+    config = function()
+      require("project_nvim").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+        respect_buf_cwd = true,
+        update_focused_file = {
+          enable = true,
+          update_root = true
+        },
+      }
+    end
+  },
   ["rmagatti/auto-session"] = {
     config = function ()
       require("auto-session").setup {
@@ -80,7 +85,11 @@ return {
   ["nvim-pack/nvim-spectre"] = {},
   ["ojroques/nvim-osc52"] = {},
   ["tpope/vim-fugitive"] = {},
-  ["rcarriga/nvim-dap-ui"] = {},
+  ["rcarriga/nvim-dap-ui"] = {
+    config = function()
+      require('dapui').setup()
+    end
+  },
   ["mfussenegger/nvim-dap"] = {
     config = function()
       require("custom.plugins.dap")
