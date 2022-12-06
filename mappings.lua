@@ -191,7 +191,12 @@ M.floaterm = {
 
 M.todo = {
   n = {
-    ['<leader>tc'] = {":TodoTrouble<CR>", "todo trouble"},
+    ['<leader>tc'] = {
+      function ()
+         vim.api.nvim_command("TodoTrouble keywords=[TODO,todo] cwd=" .. vim.fn.expand "%:p:h")
+      end,
+      "todo trouble"
+    },
   }
 }
 
