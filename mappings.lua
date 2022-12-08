@@ -32,7 +32,7 @@ M.general = {
     ["<leader>o"] = { "<cmd> Telescope buffers <CR>", "find buffer" },
   },
   c = {
-    ['<C-a>'] = {"<Home>", "home"},
+    ["<C-a>"] = { "<Home>", "home" },
   },
 }
 
@@ -56,6 +56,10 @@ M.buf = {
         require("nvchad_ui.tabufline").closeAllBufs()
       end,
       "close all buffer",
+    },
+    ["<leader>ft"] = {
+      "<cmd>Telescope asynctasks all<CR>",
+      "find all tasks",
     },
   },
 }
@@ -245,8 +249,8 @@ M.yank = {
     ["P"] = {
       "<Plug>(YoinkPaste_P)",
       "paste before",
-    }
-  }
+    },
+  },
 }
 
 -- more keybinds!

@@ -190,4 +190,14 @@ return {
     end,
   },
   ["svermeulen/vim-yoink"] = {},
+  ["skywind3000/asyncrun.vim"] = {
+  },
+  ["skywind3000/asynctasks.vim"] = {
+    config = function()
+      require("custom.plugins.asynctasks")
+    end
+  },
+  ["GustavoKatel/telescope-asynctasks.nvim"] = {
+    after = "asynctasks.vim",
+  }
 }
