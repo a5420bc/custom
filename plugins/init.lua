@@ -27,6 +27,8 @@ return {
 
   ["nvim-telescope/telescope.nvim"] = {
     override_options = overrides.telescope,
+    module = "telescope",
+    cmd = "Telescope",
   },
 
   -- Install a plugin
@@ -147,7 +149,7 @@ return {
         -- or leave it empty to use the default settings
         -- refer to the configuration section below
         keywords = {
-           TODO = { icon = " ", color = "info", alt = {'todo'} },
+          TODO = { icon = " ", color = "info", alt = { "todo" } },
         },
         -- highlighting of the line containing the todo comment
         -- * before: highlights before the keyword (typically comment characters)
@@ -181,4 +183,11 @@ return {
       }
     end,
   },
+  ["phaazon/hop.nvim"] = {
+    branch = "v2",
+    config = function()
+      require("hop").setup {}
+    end,
+  },
+  ["svermeulen/vim-yoink"] = {},
 }

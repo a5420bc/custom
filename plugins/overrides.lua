@@ -42,16 +42,17 @@ M.nvimtree = {
 }
 
 M.telescope = {
-  module = "telescope",
+  -- module = "telescope",
   extensions_list = { "themes", "terms", "session-lens" },
-  extensions= {
-    projects = {
-      projects = {},
-    }
-  },
-  defaults={
-    cache_picker={
-      num_pickers=3,
+  -- extensions= {
+  --   projects = {
+  --     projects = {},
+  --   }
+  -- },
+  defaults = {
+    initial_mode = "normal",
+    cache_picker = {
+      num_pickers = 3,
     },
   },
 }
