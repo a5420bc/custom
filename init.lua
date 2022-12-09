@@ -12,6 +12,7 @@ autocmd("BufEnter", {
   end
 })
 
+vim.cmd("set fileencodings=ucs-bom,utf-8,gbk,gb18030,big5,euc-jp,latin1")
 
 -- Auto resize panes when resizing nvim window
 -- autocmd("VimResized", {
