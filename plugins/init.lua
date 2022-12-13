@@ -2,8 +2,20 @@ local overrides = require "custom.plugins.overrides"
 
 return {
 
-  ["goolord/alpha-nvim"] = { disable = false }, -- enables dashboard
+  -- ["goolord/alpha-nvim"] = { disable = false }, -- enables dashboard
 
+  -- session manager
+  ["mhinz/vim-startify"] = {
+  },
+  ["xolox/vim-session"] = {
+    requires = "xolox/vim-misc",
+    config = function()
+      require("custom.plugins.session")
+    end,
+  },
+  ["HUAHUAI23/telescope-session.nvim"] = {
+    after = "telescope.nvim"
+  },
   -- Override plugin definition options
   ["neovim/nvim-lspconfig"] = {
     config = function()
@@ -59,29 +71,6 @@ return {
           enable = true,
           update_root = true,
         },
-      }
-    end,
-  },
-  ["rmagatti/auto-session"] = {
-    config = function()
-      require("auto-session").setup {
-        log_level = "error",
-        -- auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
-        auto_session_enable_last_session = true,
-        auto_save_enabled = true,
-        auto_restore_enabled = true,
-      }
-    end,
-  },
-  ["rmagatti/session-lens"] = {
-    cmd = "SearchSession",
-    config = function()
-      require("session-lens").setup {
-        --[[your custom config--]]
-        --
-        -- path_display = {'shorten'},
-        -- theme_conf = { border = false },
-        path_display = { "shorten" },
       }
     end,
   },
@@ -190,14 +179,13 @@ return {
     end,
   },
   ["svermeulen/vim-yoink"] = {},
-  ["skywind3000/asyncrun.vim"] = {
-  },
+  ["skywind3000/asyncrun.vim"] = {},
   ["skywind3000/asynctasks.vim"] = {
     config = function()
-      require("custom.plugins.asynctasks")
-    end
+      require "custom.plugins.asynctasks"
+    end,
   },
   ["GustavoKatel/telescope-asynctasks.nvim"] = {
     after = "asynctasks.vim",
-  }
+  },
 }

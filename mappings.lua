@@ -119,19 +119,19 @@ M.osc = {
 M.session = {
   n = {
     ["<leader>so"] = {
-      "<cmd>SearchSession<CR>",
+      "<cmd>so :Startify<CR>",
       "open session select window",
     },
     ["<leader>sd"] = {
-      "<cmd>Autosession delete<CR>",
+      "<cmd>:SDelete<CR>",
       "select session to delete",
     },
     ["<leader>ss"] = {
-      "<cmd>SaveSession<CR>",
+      "<cmd>:SSave<CR>",
       "save session",
     },
     ["<leader>sl"] = {
-      "<cmd>Autosession search<CR>",
+      ":MyOpenSession",
       "session list",
     },
   },
