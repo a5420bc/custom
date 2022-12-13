@@ -119,7 +119,7 @@ M.osc = {
 M.session = {
   n = {
     ["<leader>so"] = {
-      "<cmd>so :Startify<CR>",
+      "<cmd>:Startify<CR>",
       "open session select window",
     },
     ["<leader>sd"] = {
