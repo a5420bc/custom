@@ -35,6 +35,9 @@ vim.api.nvim_exec(
          let g:session_swap_name =  fnamemodify(v:this_session, ':t')
          call xolox#session#open_cmd(a:name, a:bang, 'OpenSession')
        endif
+       if &filetype == "php"
+         exe "silent! LspRestart"
+       endif
      endfunction
      command! -bar -bang -nargs=? -complete=customlist,xolox#session#complete_names MyOpenSession  call MySessionReload(<q-args>, <q-bang>)
 ]],
