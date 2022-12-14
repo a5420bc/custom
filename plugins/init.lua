@@ -189,4 +189,7 @@ return {
   ["GustavoKatel/telescope-asynctasks.nvim"] = {
     after = "asynctasks.vim",
   },
+  ["nvim-telescope/telescope-fzf-native.nvim"] = {
+    run = 'make'
+  },
 }
