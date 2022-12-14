@@ -72,9 +72,13 @@ M.telescope = {
     },
     ["<leader>fs"] = {
       function()
-        vim.cmd("Telescope live_grep default_text=" .. vim.fn.expand "<cword>")
+        vim.cmd("Telescope grep_string")
       end,
       "find string under the cursor",
+    },
+    ["<leader>fa"] = {
+      ":Telescope grep_string search=",
+      "find string input"
     },
     ["<leader>fg"] = {
       "<cmd>Telescope resume pickers=live_grep<CR>",
