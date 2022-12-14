@@ -94,6 +94,7 @@ return {
     config = function()
       require("lualine").setup {
         sections = {
+          lualine_b = {{"%{fnamemodify(v:this_session,':t')}"}, 'branch', 'diff', 'diagnostics'},
           lualine_c = { { "filename", path = 1 } },
         },
       }
