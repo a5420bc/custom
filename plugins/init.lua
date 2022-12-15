@@ -192,4 +192,5 @@ return {
   ["nvim-telescope/telescope-fzf-native.nvim"] = {
     run = 'make'
   },
+  ["nvim-telescope/telescope-live-grep-args.nvim"] = {},
 }

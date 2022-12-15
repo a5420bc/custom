@@ -76,10 +76,6 @@ M.telescope = {
       end,
       "find string under the cursor",
     },
-    ["<leader>fa"] = {
-      ":Telescope grep_string search=",
-      "find string input"
-    },
     ["<leader>fg"] = {
       "<cmd>Telescope resume pickers=live_grep<CR>",
       "reopen search result",
